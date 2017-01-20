@@ -1,0 +1,7 @@
+:MainWindow.signInBt_QPushButton	{name='signInBt' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
+:MainWindow.userNameLb_QPushButton	{name='userNameLb' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
+:MainWindow_MainUI	{name='MainWindow' type='MainUI' visible='1'}
+:SignInForm.signInBt_QPushButton	{name='signInBt' type='QPushButton' visible='1' window=':SignInForm_QDialog'}
+:SignInForm.signInName_QLineEdit	{name='signInName' type='QLineEdit' visible='1' window=':SignInForm_QDialog'}
+:SignInForm.signInPass_QLineEdit	{name='signInPass' type='QLineEdit' visible='1' window=':SignInForm_QDialog'}
+:SignInForm_QDialog	{name='SignInForm' type='QDialog' visible='1'}
