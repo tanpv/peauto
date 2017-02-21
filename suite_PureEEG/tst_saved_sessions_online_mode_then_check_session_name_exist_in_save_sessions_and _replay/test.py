@@ -6,6 +6,13 @@ def main():
     
     startApplication("EmotivXavierPure.EEG")
     snooze(3)
+    #Login
+    mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
+    type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
+    type(waitForObject(":SignInForm.signInName_QLineEdit"), "<Tab>")
+    type(waitForObject(":SignInForm.signInPass_QLineEdit"), "Thuyvy12")
+    clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
+    snooze(10)
     # check  online mode properly?
     test.compare(str(waitForObjectExists(":MainWindow.userNameLb_QPushButton").text), "thuyvy")
     test.compare(str(waitForObjectExists(":MainWindow.modeSignin_QPushButton").styleSheet), "\nborder:1px solid black;\nborder-radius:5px;\ncolor:white;\nbackground:black;\nfont: 12px;")

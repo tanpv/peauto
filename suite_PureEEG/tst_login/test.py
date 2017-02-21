@@ -10,7 +10,7 @@ def main():
     type(waitForObject(":SignInForm.signInPass_QLineEdit"), "Thuyvy12")
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     #wait for 3 seconds
-    snooze(3)
+    snooze(5)
     #check EmotivID
     sendEvent("QMoveEvent", waitForObject(":MainWindow_MainUI"), 152, 0, 390, 0)
     test.compare(str(waitForObjectExists(":MainWindow.userNameLb_QPushButton").text), "thuyvy")

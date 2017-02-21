@@ -8,6 +8,7 @@ def main():
     mouseClick(waitForObject(":signInOfflineMode.signInName_QLineEdit"), 77, 19, 0, Qt.LeftButton)
     type(waitForObject(":signInOfflineMode.signInName_QLineEdit"), "thuyvy")
     clickButton(waitForObject(":signInOfflineMode.signInOffBt_QPushButton"))
+    snooze(5)
     
     clickButton(waitForObject(":MainWindow.savedSessionsBt_QPushButton"))
     test.compare(str(waitForObjectExists(":RecordedSession.pageLb_QLabel").text), "Page : 1")

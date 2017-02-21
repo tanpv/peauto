@@ -6,7 +6,7 @@ def main():
     mouseClick(waitForObject(":signInOfflineMode.signInName_QLineEdit"), 77, 19, 0, Qt.LeftButton)
     type(waitForObject(":signInOfflineMode.signInName_QLineEdit"), "thuyvy")
     clickButton(waitForObject(":signInOfflineMode.signInOffBt_QPushButton"))
-            
+    snooze(5)
     # Save recording
     clickButton(waitForObject(":MainWindow.SaveData_QPushButton"))
     mouseClick(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), 106, 19, 0, Qt.LeftButton)

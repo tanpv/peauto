@@ -44,4 +44,8 @@ def main():
         type(waitForObject(":fileNameEdit_QLineEdit"), path)
         clickButton(waitForObject(":QFileDialog.Choose_QPushButton"))
         sendEvent("QMoveEvent", waitForObject(":RecordedSession_RecordedSession"), 423, 134, 625, 152)
-        snooze(3)   
+        snooze(3)  
+        
+        #check file exist in the folder
+        
+        #test.verify(os.path.exists(infile), "infile correctly present") 

@@ -3,8 +3,16 @@
 def main():
     startApplication("EmotivXavierPure.EEG")
     snooze(3)
+    #Login
+    mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
+    type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
+    type(waitForObject(":SignInForm.signInName_QLineEdit"), "<Tab>")
+    type(waitForObject(":SignInForm.signInPass_QLineEdit"), "Thuyvy12")
+    clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
+    snooze(10)
+    
     clickTab(waitForObject(":MainWindow.ModeEpocFrame_QTabWidget"), "FFT")
-   
+    
     # Check channel
     test.compare(str(waitForObjectExists(":FFT.label_7_QLabel").text), "Channel")
     mouseClick(waitForObject(":FFT.Channel_QComboBox"), 79, 12, 0, Qt.LeftButton)
