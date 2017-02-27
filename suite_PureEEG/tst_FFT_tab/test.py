@@ -11,7 +11,7 @@ def main():
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     snooze(10)
     
-    clickTab(waitForObject(":MainWindow.ModeEpocFrame_QTabWidget"), "FFT")
+    clickTab(waitForObject(":MainWindow.ModeEpocFrame_QTabWidget_2"), "FFT")
     
     # Check channel
     test.compare(str(waitForObjectExists(":FFT.label_7_QLabel").text), "Channel")
