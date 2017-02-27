@@ -5,15 +5,17 @@ def main():
     clickButton(waitForObject(":MainWindow.signInBt_QPushButton"))
     #Login
     mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
-    type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
+    name= "thuyvy"
+    type(waitForObject(":SignInForm.signInName_QLineEdit"), name)
     type(waitForObject(":SignInForm.signInName_QLineEdit"), "<Tab>")
-    type(waitForObject(":SignInForm.signInPass_QLineEdit"), "Thuyvy12")
+    passw= "Thuyvy12"
+    type(waitForObject(":SignInForm.signInPass_QLineEdit"), passw)
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
-    #wait for 3 seconds
-    snooze(5)
+    #wait for 10 seconds
+    snooze(10)
     #check EmotivID
     sendEvent("QMoveEvent", waitForObject(":MainWindow_MainUI"), 152, 0, 390, 0)
-    test.compare(str(waitForObjectExists(":MainWindow.userNameLb_QPushButton").text), "thuyvy")
+    test.compare(str(waitForObjectExists(":MainWindow.userNameLb_QPushButton").text), name)
     #check Sign Out show
     test.compare(str(waitForObjectExists(":MainWindow.userNameLb_QPushButton").styleSheet), "border:1px solid white;\nfont: 12px;")
     test.compare(str(waitForObjectExists(":MainWindow.signOutBt_QPushButton").text), "Sign Out")

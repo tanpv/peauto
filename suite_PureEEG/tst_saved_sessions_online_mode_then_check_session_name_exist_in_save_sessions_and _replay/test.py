@@ -6,8 +6,9 @@ def main():
     
     startApplication("EmotivXavierPure.EEG")
     snooze(3)
-    #Login
-    mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
+    #Sign In
+    clickButton(waitForObject(":MainWindow.signInBt_QPushButton"))
+    mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 33, 20, 0, Qt.LeftButton)
     type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
     type(waitForObject(":SignInForm.signInName_QLineEdit"), "<Tab>")
     type(waitForObject(":SignInForm.signInPass_QLineEdit"), "Thuyvy12")
@@ -19,8 +20,7 @@ def main():
     test.compare(str(waitForObjectExists(":MainWindow.modeSignin_QPushButton").text), "Online")
     
     # Save recording
-    clickButton(waitForObject(":MainWindow.SaveData_QPushButton"))
-    mouseClick(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), 106, 19, 0, Qt.LeftButton)
+    clickButton(waitForObject(":MainWindow.SaveData_QPushButton_2"))
     type(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), "autotest")
     type(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), "<Tab>")
     type(waitForObject(":RecordConfigClass.recordidLe_QLineEdit"), "1")
@@ -68,11 +68,8 @@ def main():
     #test.compare(waitForObjectExists(":listFileInfoTb.0_3_QModelIndex").text, "00:00:30")
     
     test.compare(waitForObjectExists(":Local_HeaderViewItem").text, "Local")
-    test.compare(waitForObjectExists(":listFileInfoTb_QCheckBox").checked, True)
-    
     test.compare(waitForObjectExists(":Cloud_HeaderViewItem").text, "Cloud")
-    test.compare(waitForObjectExists(":listFileInfoTb_QCheckBox_2").checked, True)
-   
+       
     # continue with test play back    
     clickButton(waitForObject(":RecordedSession.playSessionBt_QPushButton"))
     # after click replay, add verify for playback controller
@@ -82,8 +79,8 @@ def main():
     
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_QLabel").text), "File path :")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_2_QLabel").text), "Subject ID :")
-    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit").text), SubjectID)
-    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit").displayText), SubjectID)
+    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit_2").text), SubjectID)
+    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit_2").displayText), SubjectID)
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_3_QLabel").text), "Record ID :")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.recordIDLine_QLineEdit").displayText), RecordID)
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.recordIDLine_QLineEdit").text), RecordID)

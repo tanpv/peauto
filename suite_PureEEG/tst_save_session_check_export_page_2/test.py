@@ -14,7 +14,10 @@ def main():
     
     clickButton(waitForObject(":MainWindow.savedSessionsBt_QPushButton"))
     test.compare(str(waitForObjectExists(":RecordedSession.pageLb_QLabel").text), "Page : 1")
-    if test.compare(waitForObjectExists(":10_HeaderViewItem").text, "10") : 
+    test.compare(waitForObjectExists(":RecordedSession.listFileInfoTb_QTableWidget").columnCount, 6)
+    if test.compare(waitForObjectExists(":RecordedSession.listFileInfoTb_QTableWidget").rowCount, 10):
+ 
+        test.compare(waitForObjectExists(":10_HeaderViewItem").text, "10")  
         test.compare(waitForObjectExists(":10_HeaderViewItem").type, "HeaderViewItem")
         test.compare(waitForObjectExists(":10_HeaderViewItem").visible, True)
         test.compare(str(waitForObjectExists(":RecordedSession.nextBt_QPushButton").styleSheet), "background-image: url(:/Resources/next.png);")

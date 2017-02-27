@@ -8,8 +8,10 @@ def main():
     clickButton(waitForObject(":signInOfflineMode.signInOffBt_QPushButton"))
     snooze(5)
     # Save recording
-    clickButton(waitForObject(":MainWindow.SaveData_QPushButton"))
-    mouseClick(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), 106, 19, 0, Qt.LeftButton)
+    
+    #clickButton(waitForObject(":MainWindow.SaveData_QPushButton"))
+    clickButton(waitForObject(":MainWindow.SaveData_QPushButton_2"))
+    #mouseClick(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), 106, 19, 0, Qt.LeftButton)
     type(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), "autotest")
     type(waitForObject(":RecordConfigClass.subjectidLe_QLineEdit"), "<Tab>")
     type(waitForObject(":RecordConfigClass.recordidLe_QLineEdit"), "1")
@@ -39,21 +41,15 @@ def main():
     test.compare(waitForObjectExists(":SubjectID_HeaderViewItem").text, "SubjectID")
     
     test.compare(waitForObjectExists(":RecordID_HeaderViewItem").text, "RecordID")
-    
-    
-    
+        
     test.compare(waitForObjectExists(":Start Time_HeaderViewItem").text, "Start Time")
-    
    
-    
     test.compare(waitForObjectExists(":Duration (s)_HeaderViewItem").text, "Duration (s)")
    
     test.compare(waitForObjectExists(":Local_HeaderViewItem").text, "Local")
-    test.compare(waitForObjectExists(":listFileInfoTb_QCheckBox").checked, True)
-    
+        
     test.compare(waitForObjectExists(":Cloud_HeaderViewItem").text, "Cloud")
-    
-   
+      
     # continue with test play back    
     clickButton(waitForObject(":RecordedSession.playSessionBt_QPushButton"))
     # after click replay, add verify for playback controller
@@ -63,14 +59,17 @@ def main():
     
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_QLabel").text), "File path :")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_2_QLabel").text), "Subject ID :")
-    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit").text), SubjectID)
-    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit").displayText), SubjectID)
+    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit_2").text), SubjectID)
+    test.compare(str(waitForObjectExists(":PlaybackControllerClass.subjectIDLine_QLineEdit_2").displayText), SubjectID)
+    
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_3_QLabel").text), "Record ID :")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.recordIDLine_QLineEdit").displayText), RecordID)
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.recordIDLine_QLineEdit").text), RecordID)
+   
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_4_QLabel").text), "Date :")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.label_5_QLabel").text), "Start time :")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.playButton_QPushButton").styleSheet), "font: bold 12px ;\ncolor:white;\nbackground:black;")
+    
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.playButton_QPushButton").text), "Play")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.pauseButton_QPushButton").text), "Pause")
     test.compare(str(waitForObjectExists(":PlaybackControllerClass.pauseButton_QPushButton").styleSheet), "font: bold 12px ;\ncolor:white;\nbackground:black;")

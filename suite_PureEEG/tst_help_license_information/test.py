@@ -2,6 +2,7 @@
 
 def main():
     startApplication("EmotivXavierPure.EEG")
+    clickButton(waitForObject(":MainWindow.signInBt_QPushButton"))
     #Login
     mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
     type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
@@ -10,10 +11,10 @@ def main():
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     snooze(10)
     #check form License Information
-    clickButton(waitForObject(":MainWindow.menuPushButton_QPushButton"))
     clickButton(waitForObject(":menuGroupBox.helpMenuButton_QPushButton"))
+    clickButton(waitForObject(":menuGroupBox.helpMenuButton_QPushButton_2"))
     waitForObjectItem(":menuGroupBox.helpListWidget_QListWidget", "                   License Information")
-    clickItem(":menuGroupBox.helpListWidget_QListWidget", "                   License Information", 78, 16, 0, Qt.LeftButton)
+    clickItem(":menuGroupBox.helpListWidget_QListWidget", "                   License Information", 124, 4, 0, Qt.LeftButton)
     test.compare(str(waitForObjectExists(":licenseInfoForm.label_QLabel").styleSheet), "font: 11pt \"Sans Serif\";\ncolor: rgb(0, 0, 0);\nfont: bold")
     #check text
     test.compare(str(waitForObjectExists(":licenseInfoForm.label_QLabel").text), "License Information")

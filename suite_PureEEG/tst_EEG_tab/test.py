@@ -2,7 +2,7 @@
 
 def main():
     startApplication("EmotivXavierPure.EEG")
-    snooze(3)
+    clickButton(waitForObject(":MainWindow.signInBt_QPushButton"))
     #Login
     mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
     type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
@@ -11,8 +11,9 @@ def main():
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     snooze(10)
     #check
-    if (test.compare(str(waitForObjectExists(":MainWindow.EPOCModeButton_QPushButton").styleSheet), "\nborder:1px solid black;\nborder-radius:5px;\nfont: 16px;\ncolor:white;\nbackground:black;") and test.compare(str(waitForObjectExists(":MainWindow.InsightModeButton_QPushButton").styleSheet), "border:1px solid white;\nfont: 16px;")):
-      
+    if (str(waitForObjectExists(":MainWindow.EPOCModeButton_QPushButton").styleSheet)== "\nborder:1px solid black;\nborder-radius:5px;\nfont: 16px;\ncolor:white;\nbackground:black;") and (str(waitForObjectExists(":MainWindow.InsightModeButton_QPushButton").styleSheet), "border:1px solid white;\nfont: 16px;"):
+    
+    
         #check Epoc/Epoc+  headset 
         # Check Option
         test.compare(str(waitForObjectExists(":EEG.AllChannels_QCheckBox").styleSheet), "font:bold;color:white;")
@@ -38,9 +39,9 @@ def main():
         clickButton(waitForObject(":EEG.F7_QCheckBox"))
         clickButton(waitForObject(":EEG.F3_QCheckBox"))
         test.compare(waitForObjectExists(":EEG.F3_QCheckBox").checked, True)
-        test.compare(str(waitForObjectExists(":EEG.F3_QCheckBox").text), "F3")
-        test.compare(str(waitForObjectExists(":EEG.F3_QCheckBox").styleSheet), "font:bold;\ncolor: \"Cyan\";")
-        
+        test.compare(str(waitForObjectExists(":EEG.F3_QCheckBox_2").styleSheet), "font:bold;\ncolor: \"Cyan\";")
+        test.compare(str(waitForObjectExists(":EEG.F3_QCheckBox_2").text), "F3")
+                
         spinUp(waitForObject(":EEG.MaxAmplitude_QSpinBox"))
         spinDown(waitForObject(":EEG.MaxAmplitude_QSpinBox"))
         spinUp(waitForObject(":EEG.MinAmplitude_QSpinBox"))

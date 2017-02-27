@@ -5,7 +5,7 @@ def main():
     snooze(2)
     #Sign In
     clickButton(waitForObject(":MainWindow.offlineModebt_QPushButton"))
-    mouseClick(waitForObject(":signInOfflineMode.signInName_QLineEdit"), 77, 19, 0, Qt.LeftButton)
+    mouseClick(waitForObject(":signInOfflineMode.signInName_QLineEdit"), 164, 19, 0, Qt.LeftButton)
     type(waitForObject(":signInOfflineMode.signInName_QLineEdit"), "thuyvy")
     clickButton(waitForObject(":signInOfflineMode.signInOffBt_QPushButton"))
     snooze(5)

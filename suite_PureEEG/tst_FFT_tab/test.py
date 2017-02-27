@@ -2,7 +2,7 @@
 
 def main():
     startApplication("EmotivXavierPure.EEG")
-    snooze(3)
+    clickButton(waitForObject(":MainWindow.signInBt_QPushButton"))
     #Login
     mouseClick(waitForObject(":SignInForm.signInName_QLineEdit"), 69, 18, 0, Qt.LeftButton)
     type(waitForObject(":SignInForm.signInName_QLineEdit"), "thuyvy")
@@ -76,94 +76,94 @@ def main():
     # check amax,
     test.compare(str(waitForObjectExists(":FFT.label_8_QLabel").text), "amax")
     test.compare(str(waitForObjectExists(":FFT.amax_QSpinBox").text), "80")
-    test.compare(waitForObjectExists(":FFT.amax_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.amax_QSpinBox_2").singleStep, 1)
     
-    spinUp(waitForObject(":FFT.amax_QSpinBox"))
+    spinUp(waitForObject(":FFT.amax_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.amax_QSpinBox").text), "81")
     snooze(1)
     
-    spinDown(waitForObject(":FFT.amax_QSpinBox"))
+    spinDown(waitForObject(":FFT.amax_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.amax_QSpinBox").text), "80")
     snooze(1)
     
     #check amin
     test.compare(str(waitForObjectExists(":FFT.label_9_QLabel").text), "amin")
     test.compare(str(waitForObjectExists(":FFT.amin_QSpinBox").text), "-65")
-    test.compare(waitForObjectExists(":FFT.amin_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.amin_QSpinBox_2").singleStep, 1)
     
-    spinUp(waitForObject(":FFT.amin_QSpinBox"))
+    spinUp(waitForObject(":FFT.amin_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.amin_QSpinBox").text), "-64")
     snooze(1)
     
-    spinDown(waitForObject(":FFT.amin_QSpinBox"))
+    spinDown(waitForObject(":FFT.amin_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.amin_QSpinBox").text), "-65")
     snooze(1)
     
     #check fmax 
     test.compare(str(waitForObjectExists(":FFT.label_11_QLabel").text), "fmax")
     test.compare(str(waitForObjectExists(":FFT.fmax_QSpinBox").text), "64")
-    test.compare(waitForObjectExists(":FFT.fmax_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.fmax_QSpinBox_2").singleStep, 1)
     
-    spinDown(waitForObject(":FFT.fmax_QSpinBox"))
+    spinDown(waitForObject(":FFT.fmax_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.fmax_QSpinBox").text), "63")
     snooze(1)
     
-    spinUp(waitForObject(":FFT.fmax_QSpinBox"))
+    spinUp(waitForObject(":FFT.fmax_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.fmax_QSpinBox").text), "64")
     snooze(1)
     
     #check fmin
     test.compare(str(waitForObjectExists(":FFT.label_10_QLabel").text), "fmin")
     test.compare(str(waitForObjectExists(":FFT.fmin_QSpinBox").text), "0")
-    test.compare(waitForObjectExists(":FFT.fmin_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.fmin_QSpinBox_2").singleStep, 1)
     
-    spinUp(waitForObject(":FFT.fmin_QSpinBox"))
+    spinUp(waitForObject(":FFT.fmin_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.fmin_QSpinBox").text), "1")
     snooze(1)
     
-    spinDown(waitForObject(":FFT.fmin_QSpinBox"))
+    spinDown(waitForObject(":FFT.fmin_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.fmin_QSpinBox").text), "0")
     snooze(1)
     
     #check length
     test.compare(str(waitForObjectExists(":FFT.label_12_QLabel").text), "length")
     test.compare(str(waitForObjectExists(":FFT.length_QSpinBox").text), "256")
-    test.compare(waitForObjectExists(":FFT.length_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.length_QSpinBox_2").singleStep, 1)
     
-    spinUp(waitForObject(":FFT.length_QSpinBox"))
+    spinUp(waitForObject(":FFT.length_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit").displayText), "257")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit").text), "257")
     snooze(1)
     
-    spinDown(waitForObject(":FFT.length_QSpinBox"))
+    spinDown(waitForObject(":FFT.length_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit").displayText), "256")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit").text), "256")
-    test.compare(waitForObjectExists(":FFT.length_QSpinBox").value, 256)
+   
     test.compare(str(waitForObjectExists(":FFT.length_QSpinBox").text), "256")
     snooze(1)
        
     #check step
     test.compare(str(waitForObjectExists(":FFT.label_13_QLabel").text), "step")
     test.compare(str(waitForObjectExists(":FFT.step_QSpinBox").text), "23")
-    test.compare(waitForObjectExists(":FFT.step_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.step_QSpinBox_2").singleStep, 1)
     
-    spinUp(waitForObject(":FFT.step_QSpinBox"))
+    spinUp(waitForObject(":FFT.step_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_2").displayText), "24")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_2").text), "24")
     snooze(1)
     
-    spinDown(waitForObject(":FFT.step_QSpinBox"))
+    spinDown(waitForObject(":FFT.step_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_2").displayText), "23")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_2").text), "23")
     snooze(1)
     
     #check dB
     test.compare(str(waitForObjectExists(":FFT.label_15_QLabel").text), "dB")
-    test.compare(str(waitForObjectExists(":FFT.dbBox_QComboBox").currentText), "10")
-    test.compare(waitForObjectExists(":FFT.dbBox_QComboBox").maxVisibleItems, 10)
-    mouseClick(waitForObject(":FFT.dbBox_QComboBox"), 50, 16, 0, Qt.LeftButton)
-    mouseClick(waitForObjectItem(":FFT.dbBox_QComboBox", "20"), 17, 7, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.dbBox_QComboBox").currentText), "20")
+ 
+    test.compare(str(waitForObjectExists(":FFT.dbBox_QComboBox_2").currentText), "10")
+    mouseClick(waitForObject(":FFT.dbBox_QComboBox_2"), 51, 15, 0, Qt.LeftButton)
+    mouseClick(waitForObjectItem(":FFT.dbBox_QComboBox_2", "20"), 29, 7, 0, Qt.LeftButton)
+    test.compare(str(waitForObjectExists(":FFT.dbBox_QComboBox_2").currentText), "20")
     
     #check Windowing
     test.compare(str(waitForObjectExists(":FFT.label_14_QLabel").text), "Windowing")
@@ -232,16 +232,16 @@ def main():
     
     #lower
     test.compare(str(waitForObjectExists(":FFT.label_19_QLabel").text), "lower")
-    test.compare(waitForObjectExists(":FFT.lower_QSpinBox").singleStep, 1)
+    test.compare(waitForObjectExists(":FFT.lower_QSpinBox_2").singleStep, 1)
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_5").displayText), "3")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_5").text), "3")
     
-    spinUp(waitForObject(":FFT.lower_QSpinBox"))
+    spinUp(waitForObject(":FFT.lower_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_5").text), "1")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_5").displayText), "1")
     snooze(1)
     
-    spinDown(waitForObject(":FFT.lower_QSpinBox"))
+    spinDown(waitForObject(":FFT.lower_QSpinBox_2"))
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_5").text), "0")
     test.compare(str(waitForObjectExists(":FFT.qt_spinbox_lineedit_QLineEdit_5").displayText), "0")
     snooze(1)
