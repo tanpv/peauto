@@ -11,68 +11,89 @@ def main():
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     snooze(10)
     
-    clickTab(waitForObject(":MainWindow.ModeEpocFrame_QTabWidget_2"), "FFT")
+    clickTab(waitForObject(":MainWindow.tabWidget_QTabWidget_3"), "FFT")
+    if (str(waitForObjectExists(":MainWindow.EPOCModeButton_QPushButton").styleSheet)== "\nborder:1px solid black;\nborder-radius:5px;\nfont: 16px;\ncolor:white;\nbackground:black;") and (str(waitForObjectExists(":MainWindow.InsightModeButton_QPushButton").styleSheet), "border:1px solid white;\nfont: 16px;"):
     
     # Check channel
-    test.compare(str(waitForObjectExists(":FFT.label_7_QLabel").text), "Channel")
-    mouseClick(waitForObject(":FFT.Channel_QComboBox"), 79, 12, 0, Qt.LeftButton)
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "AF3"), 5, 6, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "AF3")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F7"), 11, 1, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F7")
-    snooze(1)
-    
-    sendEvent("QMouseEvent", waitForObject(":FFT.Channel_QComboBox"), QEvent.MouseButtonRelease, 49, -16, Qt.LeftButton, 0, 0)
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F3"), 9, 3, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F3")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "FC5"), 16, 5, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "FC5")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "T7"), 11, 3, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "T7")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "P7"), 15, 5, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "P7")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "O1"), 14, 3, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "O1")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "O2"), 10, 1, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "O2")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "P8"), 10, 1, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "P8")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "T8"), 11, 4, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "T8")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "FC6"), 23, 5, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "FC6")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F4"), 12, 6, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F4")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F8"), 19, 5, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F8")
-    snooze(1)
-    
-    mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "AF4"), 22, 5, 0, Qt.LeftButton)
-    test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "AF4")
-    snooze(1)
-    
+        test.compare(str(waitForObjectExists(":FFT.label_7_QLabel").text), "Channel")
+        mouseClick(waitForObject(":FFT.Channel_QComboBox"), 79, 12, 0, Qt.LeftButton)
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "AF3"), 5, 6, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "AF3")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F7"), 11, 1, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F7")
+        snooze(1)
+        
+        sendEvent("QMouseEvent", waitForObject(":FFT.Channel_QComboBox"), QEvent.MouseButtonRelease, 49, -16, Qt.LeftButton, 0, 0)
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F3"), 9, 3, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F3")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "FC5"), 16, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "FC5")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "T7"), 11, 3, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "T7")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "P7"), 15, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "P7")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "O1"), 14, 3, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "O1")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "O2"), 10, 1, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "O2")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "P8"), 10, 1, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "P8")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "T8"), 11, 4, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "T8")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "FC6"), 23, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "FC6")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F4"), 12, 6, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F4")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "F8"), 19, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "F8")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "AF4"), 22, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "AF4")
+        snooze(1)
+    else:
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "AF3"), 72, 7, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "AF3")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "T7"), 30, 6, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "T7")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "Pz"), 15, 2, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "Pz")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "T8"), 11, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "T8")
+        snooze(1)
+        
+        mouseClick(waitForObjectItem(":FFT.Channel_QComboBox", "AF4"), 4, 5, 0, Qt.LeftButton)
+        test.compare(str(waitForObjectExists(":FFT.Channel_QComboBox").currentText), "AF4")
+        snooze(1)
+        
     # check amax,
     test.compare(str(waitForObjectExists(":FFT.label_8_QLabel").text), "amax")
     test.compare(str(waitForObjectExists(":FFT.amax_QSpinBox").text), "80")
