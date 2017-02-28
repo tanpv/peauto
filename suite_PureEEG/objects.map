@@ -107,17 +107,17 @@
 :MainWindow.tabWidget_QTabWidget_3	{name='tabWidget' type='QTabWidget' visible='1' window=':MainWindow_MainUI'}
 :MainWindow.userNameLb_QPushButton	{name='userNameLb' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
 :MainWindow_MainUI	{name='MainWindow' type='MainUI' visible='1'}
-:MotionChart.ACCX_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='ACCX' type='QCheckBox' visible='1'}
+:MotionChart.ACCX_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionChart_QWidget' name='ACCX' type='QCheckBox' visible='1'}
 :MotionChart.ACCY_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='ACCY' type='QCheckBox' visible='1'}
 :MotionChart.ACCZ_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='ACCZ' type='QCheckBox' visible='1'}
-:MotionChart.AllChannels_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='AllChannels' type='QCheckBox' visible='1'}
-:MotionChart.GyroScopeX_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='GyroScopeX' type='QCheckBox' visible='1'}
-:MotionChart.GyroScopeY_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='GyroScopeY' type='QCheckBox' visible='1'}
-:MotionChart.GyroscopeZ_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='GyroscopeZ' type='QCheckBox' visible='1'}
+:MotionChart.AllChannels_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionChart_QWidget' name='AllChannels' type='QCheckBox' visible='1'}
+:MotionChart.GyroScopeX_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionChart_QWidget' name='GyroScopeX' type='QCheckBox' visible='1'}
+:MotionChart.GyroScopeY_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionChart_QWidget' name='GyroScopeY' type='QCheckBox' visible='1'}
+:MotionChart.GyroscopeZ_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionChart_QWidget' name='GyroscopeZ' type='QCheckBox' visible='1'}
 :MotionChart.MAGX_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='MAGX' type='QCheckBox' visible='1'}
 :MotionChart.MAGY_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='MAGY' type='QCheckBox' visible='1'}
 :MotionChart.MAGZ_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='MAGZ' type='QCheckBox' visible='1'}
-:MotionChart.widget_QWidget	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='GyroScopeY' type='QCheckBox' visible='1'}
+:MotionChart.widget_QWidget	{container=':qt_tabwidget_stackedwidget.MotionChart_QWidget' name='GyroScopeX' type='QCheckBox' visible='1'}
 :No_QPushButton	{text='No' type='QPushButton' unnamed='1' visible='1' window=':_QMessageBox_2'}
 :PlaybackControllerClass.label_2_QLabel	{name='label_2' type='QLabel' visible='1' window=':PlaybackControllerClass_PlaybackController'}
 :PlaybackControllerClass.label_3_QLabel	{name='label_3' type='QLabel' visible='1' window=':PlaybackControllerClass_PlaybackController'}
@@ -186,6 +186,7 @@
 :qt_msgbox_label_QLabel	{name='qt_msgbox_label' type='QLabel' visible='1' window=':_QMessageBox_2'}
 :qt_tabwidget_stackedwidget.EEG_QWidget	{container=':MainWindow.qt_tabwidget_stackedwidget_QStackedWidget' name='EEG' type='QWidget' visible='1'}
 :qt_tabwidget_stackedwidget.FFT_QWidget	{container=':MainWindow.qt_tabwidget_stackedwidget_QStackedWidget' name='FFT' type='QWidget' visible='1'}
+:qt_tabwidget_stackedwidget.MotionChart_QWidget	{container=':MainWindow.qt_tabwidget_stackedwidget_QStackedWidget' name='MotionChart' type='QWidget' visible='1'}
 :qt_tabwidget_stackedwidget.MotionEpocChart_QWidget	{container=':MainWindow.qt_tabwidget_stackedwidget_QStackedWidget' name='MotionEpocChart' type='QWidget' visible='1'}
 :qt_tabwidget_tabbar.Data Packets_TabItem	{container=':MainWindow.qt_tabwidget_tabbar_QTabBar' text='Data Packets' type='TabItem'}
 :qt_tabwidget_tabbar.EEG_TabItem	{container=':MainWindow.qt_tabwidget_tabbar_QTabBar' text='EEG' type='TabItem'}

@@ -11,7 +11,7 @@ def main():
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     snooze(10)
     #click Motion
-    clickTab(waitForObject(":MainWindow.ModeEpocFrame_QTabWidget_2"), "Motion")
+    clickTab(waitForObject(":MainWindow.tabWidget_QTabWidget_3"), "Motion")
     test.compare(waitForObjectExists(":MainWindow.tabWidget_QTabWidget_2").text, "Motion")
     
     # check button
