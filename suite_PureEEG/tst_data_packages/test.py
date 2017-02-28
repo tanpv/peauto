@@ -11,5 +11,5 @@ def main():
     clickButton(waitForObject(":SignInForm.signInBt_QPushButton"))
     #wait for 7 seconds
     snooze(7)
-    clickTab(waitForObject(":MainWindow.ModeEpocFrame_QTabWidget"), "Data Packets")
+    clickTab(waitForObject(":MainWindow.tabWidget_QTabWidget_3"), "Data Packets")
     test.compare(waitForObjectExists(":qt_tabwidget_tabbar.Data Packets_TabItem").text, "Data Packets")

@@ -87,6 +87,7 @@
 :MainWindow.InsightModeButton_QPushButton	{name='InsightModeButton' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
 :MainWindow.ModeEpocFrame_QTabWidget	{container=':MainWindow.qt_tabwidget_tabbar_QTabBar' text='Motion' type='TabItem'}
 :MainWindow.ModeEpocFrame_QTabWidget_2	{name='ModeEpocFrame' type='QTabWidget' visible='1' window=':MainWindow_MainUI'}
+:MainWindow.ModeInsightFrame_QTabWidget	{container=':MainWindow.qt_tabwidget_tabbar_QTabBar' text='Data Packets' type='TabItem'}
 :MainWindow.SaveData_QPushButton	{name='savedSessionsBt' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
 :MainWindow.SaveData_QPushButton_2	{name='SaveData' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
 :MainWindow.frameAcc_QWidget	{name='frameAcc' type='QWidget' visible='1' window=':MainWindow_MainUI'}
@@ -102,6 +103,7 @@
 :MainWindow.signOutBt_QPushButton	{name='signOutBt' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
 :MainWindow.tabWidget_QTabWidget	{container=':MainWindow.qt_tabwidget_tabbar_QTabBar' text='Motion' type='TabItem'}
 :MainWindow.tabWidget_QTabWidget_2	{container=':MainWindow.qt_tabwidget_tabbar_QTabBar' text='Motion' type='TabItem'}
+:MainWindow.tabWidget_QTabWidget_3	{name='tabWidget' type='QTabWidget' visible='1' window=':MainWindow_MainUI'}
 :MainWindow.userNameLb_QPushButton	{name='userNameLb' type='QPushButton' visible='1' window=':MainWindow_MainUI'}
 :MainWindow_MainUI	{name='MainWindow' type='MainUI' visible='1'}
 :MotionChart.ACCX_QCheckBox	{container=':qt_tabwidget_stackedwidget.MotionEpocChart_QWidget' name='ACCX' type='QCheckBox' visible='1'}
